@@ -1,0 +1,26 @@
+# Configuración del proyecto Supabase (CLI)
+project_id = "martinez-barber"
+
+# get-available-slots y book-appointment los llama la web pública sin login,
+# así que necesitan verify_jwt = false. El resto solo se llaman entre
+# funciones (con la service role) o desde el panel ya autenticado.
+[functions.get-available-slots]
+verify_jwt = false
+
+[functions.book-appointment]
+verify_jwt = false
+
+[functions.send-email]
+verify_jwt = false
+
+[functions.send-reminder-emails]
+verify_jwt = false
+
+[functions.cancel-appointment]
+verify_jwt = false
+
+[functions.google-oauth-start]
+verify_jwt = false
+
+[functions.google-oauth-callback]
+verify_jwt = false
