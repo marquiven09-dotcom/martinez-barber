@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #0a0a0a;
+  color: #f2f1ed;
+  font-family: 'Inter', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.font-display {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Botón principal ovalado - el elemento más importante de la web */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #f2f1ed;
+  color: #0a0a0a;
+  font-weight: 600;
+  padding: 1rem 2.25rem;
+  border-radius: 999px;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+  min-height: 52px;
+}
+.btn-primary:active {
+  transform: scale(0.97);
+}
+.btn-primary:hover {
+  background-color: #ffffff;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: #f2f1ed;
+  border: 1px solid #2a2a2a;
+  font-weight: 500;
+  padding: 0.9rem 1.75rem;
+  border-radius: 999px;
+  transition: border-color 0.15s ease;
+  min-height: 48px;
+}
+.btn-secondary:hover {
+  border-color: #b99456;
+}
+
+.card {
+  background-color: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 1.25rem;
+}
+
+/* Línea "de corte" - elemento de firma visual, evoca la precisión de una navaja */
+.cut-line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #b99456, transparent);
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
